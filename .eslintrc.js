@@ -11,5 +11,9 @@ module.exports = {
   ],
   plugins: [],
   // add your custom rules here
-  rules: {},
+  rules: {
+    "vue/multi-word-component-names": ["error", {
+      "ignores": ["index", "ibook","Header", "Logo", "Footer","about", "Releases"],
+    }]
+  },
 }

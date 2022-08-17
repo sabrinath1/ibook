@@ -21,7 +21,7 @@ export default {
   plugins: [],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
-  components: true,
+  components: [{ path: '@/components', pathPrefix: false}],
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
@@ -30,7 +30,7 @@ export default {
     
   ],
   
-
+  postcss: null,
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: ['@nuxtjs/style-resources'],
   styleResources: {
