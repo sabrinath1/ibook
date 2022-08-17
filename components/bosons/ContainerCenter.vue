@@ -1,11 +1,8 @@
 <template>
   <div class="container">
-    <slot/>
+    <slot />
   </div>
 </template>
-
-
-</script>
 
 <style lang="scss" scoped>
 .container {
