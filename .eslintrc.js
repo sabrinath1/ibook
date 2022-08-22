@@ -15,5 +15,6 @@ module.exports = {
     "vue/multi-word-component-names": ["error", {
       "ignores": ["index", "ibook","Header", "Logo", "Footer","about", "Releases"],
     }]
+    'import/named': 0,
   },
 }
