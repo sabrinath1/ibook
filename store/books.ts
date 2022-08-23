@@ -1,5 +1,5 @@
 import { Action, Module, Mutation, VuexModule } from 'vuex-module-decorators'
-import { Book } from '@/models'
+import type { Book } from '@/models'
 import { $axios } from '@/utils/nuxt-instance'
 import { get } from 'https'
 
@@ -29,12 +29,11 @@ export default class Books extends VuexModule {
   @Action
   public async index() {
     const books = await $axios.$get('/books')
-    console.log(books)
-    this.context.commit('SET_ALL, books')
+    this.context.commit('SET_ALL', books)
   }
   @Action
   public async show({ id }: Show) {
     const book = await $axios.$get(`/books/${id}`)
-    this.context.commit('SET_SINGLE, book')
+    this.context.commit('SET_SINGLE', book)
   }
 }
