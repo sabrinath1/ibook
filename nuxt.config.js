@@ -27,7 +27,6 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/typescript
     '@nuxt/typescript-build',
-  
   ],
   
   postcss: null,
@@ -38,7 +37,7 @@ export default {
       
    },
    axios: {
-    baseUrl: 'https://ibook-api.herokuapp.com'
+    baseUrl: 'https://arnon-ibook.herokuapp.com'
    },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
