@@ -13,8 +13,10 @@ module.exports = {
   // add your custom rules here
   rules: {
     "vue/multi-word-component-names": ["error", {
-      "ignores": ["index", "ibook","Header", "Logo", "Footer","about", "Releases"],
-    }]
+      "ignores": ["index", "ibook","Header", "Logo", "Footer","about", "Releases", "Chip"],
+     
+    }],
+    "vue/no-v-html":"off",
     'import/named': 0,
   },
 }

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>{{ $route.params.id }}</h1>
+    <BookDetailsTemplate />
   </div>
 </template>
 
@@ -9,9 +9,21 @@ import Vue from 'vue'
 import { books } from '~/store'
 
 export default Vue.extend({
+  layout: 'ibook',
   async asyncData({ params }) {
     await books.show({ id: params.id as any })
-    console.log(books.$single)
+  },
+  head() {
+    return {
+      title: books.$single.title,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: books.$single.description,
+        },
+      ],
+    }
   },
 })
 </script>
